@@ -283,6 +283,55 @@ button, input { font: inherit; }
 .choice.bad { border-color: var(--red); background: #fdecee; }
 .answer-reveal { margin: 0; color: var(--muted); }
 .answer-reveal.ok { color: var(--green); font-weight: 700; }
+.error { color: var(--red); margin: 0; font-size: 0.92rem; }
+
+.shell-auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 28px;
+  padding-bottom: 48px;
+}
+
+.login-page {
+  width: 100%;
+}
+
+.login-hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-icon {
+  width: min(148px, 42vw);
+  height: auto;
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  display: block;
+  margin: 0 auto 18px;
+  animation: floatIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.94); }
+  to { opacity: 1; transform: none; }
+}
+
+.login-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 10vw, 3.1rem);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.login-form {
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  animation: rise 0.55s ease 0.08s both;
+}
 
 @media (min-width: 640px) {
   .shell { padding-top: 32px; }

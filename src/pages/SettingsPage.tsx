@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useApp } from '../lib/store'
+import { logout } from '../lib/auth'
 
-export function SettingsPage() {
+export function SettingsPage({ onLogout }: { onLogout: () => void }) {
   const {
     ready,
     settings,
@@ -14,6 +15,7 @@ export function SettingsPage() {
   } = useApp()
   const fileRef = useRef<HTMLInputElement>(null)
   const [msg, setMsg] = useState<string | null>(null)
+  const nav = useNavigate()
 
   if (!ready) return <div className="page muted">Cargando…</div>
 
@@ -77,7 +79,7 @@ export function SettingsPage() {
 
         <h2>Respaldo local</h2>
         <p className="muted">
-          Tus datos están solo en este dispositivo. Exporta un JSON para no
+          Tus datos viven solo en este dispositivo. Exporta un JSON para no
           perderlos.
         </p>
         <button type="button" className="btn" onClick={() => void download()}>
@@ -109,6 +111,19 @@ export function SettingsPage() {
           }}
         >
           Reiniciar pack actual
+        </button>
+
+        <h2>Sesión</h2>
+        <button
+          type="button"
+          className="btn ghost"
+          onClick={() => {
+            logout()
+            onLogout()
+            nav('/login', { replace: true })
+          }}
+        >
+          Cerrar sesión
         </button>
 
         {msg && <p className="muted">{msg}</p>}
