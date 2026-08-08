@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="#F7F1E8"/>
-  <rect x="10" y="12" width="12" height="40" rx="2" fill="#009246"/>
-  <rect x="26" y="12" width="12" height="40" rx="2" fill="#F1F2F1"/>
-  <rect x="42" y="12" width="12" height="40" rx="2" fill="#CE2B37"/>
+  <path d="M18 14h10c2 0 3.5 1.2 4 3l.5 12.5L32 42l-.5 12.5C31 57 29 58.5 26.5 58.5h-8.5V14z" fill="#009246"/>
+  <path d="M28 14h8c0 0 1.5.5 1.5 3v34c0 2.5-1.5 3.5-1.5 3.5h-8V14z" fill="#F8F8F6"/>
+  <path d="M36 14h10v44.5h-8.5C35 58.5 33 57 32.5 54.5L32 42l.5-12.5c.5-1.8 2-3 4-3h-.5V14z" fill="#CE2B37"/>
+  <rect x="29" y="18" width="6" height="34" rx="1.2" fill="#1C1814"/>
+  <rect x="27.5" y="18" width="9" height="3.2" rx="1" fill="#1C1814"/>
+  <rect x="27.5" y="48.8" width="9" height="3.2" rx="1" fill="#1C1814"/>
+  <rect x="24" y="52" width="5" height="4" fill="#009246"/>
+  <rect x="29.5" y="52" width="5" height="4" fill="#F8F8F6"/>
+  <rect x="35" y="52" width="5" height="4" fill="#CE2B37"/>
 </svg>
